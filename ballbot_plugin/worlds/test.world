@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- A testing model that includes the Velodyne sensor model -->
+    <model name="ballbot">
+      <include>
+        <uri>model://ballbot</uri>
+      </include>
+
+      <!-- Attach the plugin to this model -->
+      <plugin name="ballbot_control" filename="libballbot_plugin.so"/>
+    </model>
+
+    <plugin name="FrictionModifier" filename="libFrictionModifier.so"/>
+  </world>
+</sdf>

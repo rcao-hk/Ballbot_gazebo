@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="imu_transformer" pkg="ballbot_plugin" type="imu_transformer" output="screen" >
+     </node>
+
+    <node name="apply_joint_effort_client" pkg="ballbot_plugin" type="apply_joint_effort_client" output="screen" >
+     </node>
+
+</launch>

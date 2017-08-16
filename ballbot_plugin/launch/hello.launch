@@ -1,0 +1,51 @@
+<launch>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find ballbot_plugin)/worlds/test.world"/>
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+    <node name="controller" pkg="pid" type="controller" ns="ballbot_yaw" output="screen" >
+      <param name="Kp" value="0.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="10" />
+      <param name="lower_limit" value="-10" />
+      <param name="windup_limit" value="10" />
+      <param name="cutoff_frequency" value="20" />
+      <param name="max_loop_frequency" value="105.0" />
+      <param name="min_loop_frequency" value="95.0" />
+     </node>
+
+    <node name="controller" pkg="pid" type="controller" ns="ballbot_pitch" output="screen" >
+      <param name="Kp" value="1.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="10" />
+      <param name="lower_limit" value="-10" />
+      <param name="windup_limit" value="10" />
+      <param name="cutoff_frequency" value="20" />
+      <param name="max_loop_frequency" value="200.0" />
+      <param name="min_loop_frequency" value="95.0" />
+     </node>
+
+    <node name="controller" pkg="pid" type="controller" ns="ballbot_roll" output="screen" >
+      <param name="Kp" value="1.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="10" />
+      <param name="lower_limit" value="-10" />
+      <param name="windup_limit" value="10" />
+      <param name="cutoff_frequency" value="20" />
+      <param name="max_loop_frequency" value="200.0" />
+      <param name="min_loop_frequency" value="95.0" />
+     </node>
+
+
+</launch>
