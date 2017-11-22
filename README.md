@@ -5,9 +5,9 @@ A Ballbot model in gazebo environment.
 ```
 git clone https://github.com/63445538/Ballbot_gazebo
 ```
-1.Copy "Ballbot" folder to your gazebo model catalog;
-2.Copy "Ballbot_plugin" folder to your catkin workspace.
-3.compile Ballbot_plugin pack using catkin_make
+1.Copy "Ballbot" folder to your gazebo model catalog.  
+2.Copy "Ballbot_plugin" folder to your catkin workspace.  
+3.compile Ballbot_plugin pack using catkin_make.  
 
 # prerequisite
 1.gazebo 7
