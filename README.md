@@ -9,9 +9,9 @@ git clone https://github.com/63445538/Ballbot_gazebo
 2.Copy "Ballbot_plugin" folder to your catkin workspace.  
 3.Compile Ballbot_plugin pack using catkin_make.  
 
-# prerequisite
+# Prerequisite
 1.Gazebo 7  
 2.PID package:http://wiki.ros.org/pid
 
-# tutorial
+# Tutorial
 Coming soon…
