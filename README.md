@@ -10,5 +10,5 @@ git clone https://github.com/63445538/Ballbot_gazebo
 3.Compile Ballbot_plugin pack using catkin_make.  
 
 # prerequisite
-1.gazebo 7  
+1.Gazebo 7  
 2.PID package:http://wiki.ros.org/pid
